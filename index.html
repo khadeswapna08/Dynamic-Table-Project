@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <div class="container mt-4">
+        <h2>Dynamic Table Project</h2>
+         <!-- Column Toggle UI -->
+         <div id="column-toggle" class="mt-2">
+            <label>Show/Hide Columns: </label>
+            <input type="checkbox" id="toggleName" data-column="1" checked> <label for="toggleName">Name</label>
+            <input type="checkbox" id="toggleNickname" data-column="2" checked> <label for="toggleNickname">Nickname</label>
+            <input type="checkbox" id="toggleMobile Number" data-column="3" checked> <label for="toggleMobile Number">Mobile Number</label>
+            <input type="checkbox" id="toggleEmail" data-column="4" checked> <label for="toggleEmail">Email</label>
+            <input type="checkbox" id="toggleRole" data-column="5" checked> <label for="toggleRole">Role</label>
+            <input type="checkbox" id="toggleAddress" data-column="6" checked> <label for="toggleAddress">Address</label>
+            <input type="checkbox" id="toggleGender" data-column="7" checked> <label for="toggleGender">Gender</label>
+            <input type="checkbox" id="toggleProfile Picture" data-column="8" checked> <label for="toggleProfile Picture">Profile Picture</label>
+            <!-- Add more checkboxes or dropdown options for other columns -->
+        </div>
+        
+        <!-- Custom Columns UI -->
+        <div id="custom-column" class="mt-2">
+            <form id="add-column-form">
+                <label for="column-name">Add Custom Column: </label>
+                <input type="text" id="column-name" name="column-name" placeholder="Column Name">
+                <button type="submit">Add Column</button>
+            </form>
+        </div>
+        <div id="table-container" class="mt-4">
+            <table id="user-table" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Nickname</th>
+                        <th>Mobile Number</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Address</th>
+                        <th>Gender</th>
+                        <th>Profile Picture</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Table rows will be  added dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
